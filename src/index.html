@@ -4,22 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alphabet Clash Pro</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
-      rel="stylesheet"
-    />
     <link href="./style.css" rel="stylesheet" />
   </head>
   <body class="min-h-screen bg-[#1E1E1E] bg-custom-bg bg-no-repeat bg-center">
-    <main >
-      <section class="home min-h-screen text-white flex justify-center items-center text-center">
+    <main>
+      <!--------------- Home Page ------------------->
+      <section
+        class="home min-h-screen text-white flex justify-center items-center text-center hidden"
+      >
         <div class="flex flex-col gap-8 items-center">
-            <h1 class="anton-regular text-4xl md:text-6xl lg:text-8xl uppercase">ALPHABET CLASH</h1>
-            <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-            <button type="button" class="lg:w-1/6 bg-white text-black py-2.5 px-5 me-2 mb-2 text-sm font-medium rounded-lg">Play Now</button>
+          <h1 class="anton-regular text-4xl md:text-6xl lg:text-8xl uppercase">
+            ALPHABET CLASH
+          </h1>
+          <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+          <button class="lg:w-1/6 bg-white text-black py-2.5 px-5 me-2 mb-2 text-sm font-medium rounded-lg"
+          >
+            Play Now
+          </button>
         </div>
       </section>
-      <section class="playground"></section>
+      <!--------------- Playground Page ------------------->
+      <section class="playground flex flex-col justify-center items-center gap-16 pt-10">
+        <!-- screen -->
+        <div class="artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] bg-[#ffffffB3]">
+          <div class="flex justify-center"><p class="bg-[#2F2941] py-2 px-4 rounded-b-lg">Don't watch keyboard  while playing...</p></div>
+          <div class="flex justify-center items-center h-full"><p class="text-black text-8xl font-semibold">Y</p></div>
+        </div>
+         <!-- keyboard -->
+         <div>
+          <div class="my-1 flex w-full justify-center gap-1">
+          <kbd class="kbd">q</kbd>
+          <kbd class="kbd">w</kbd>
+          <kbd class="kbd">e</kbd>
+          <kbd class="kbd">r</kbd>
+          <kbd class="kbd">t</kbd>
+          <kbd class="kbd">y</kbd>
+          <kbd class="kbd">u</kbd>
+          <kbd class="kbd">i</kbd>
+          <kbd class="kbd">o</kbd>
+          <kbd class="kbd">p</kbd>
+        </div>
+        <div class="my-1 flex w-full justify-center gap-1">
+          <kbd class="kbd">a</kbd>
+          <kbd class="kbd">s</kbd>
+          <kbd class="kbd">d</kbd>
+          <kbd class="kbd">f</kbd>
+          <kbd class="kbd">g</kbd>
+          <kbd class="kbd">h</kbd>
+          <kbd class="kbd">j</kbd>
+          <kbd class="kbd">k</kbd>
+          <kbd class="kbd">l</kbd>
+        </div>
+        <div class="my-1 flex w-full justify-center gap-1">
+          <kbd class="kbd">z</kbd>
+          <kbd class="kbd">x</kbd>
+          <kbd class="kbd">c</kbd>
+          <kbd class="kbd">v</kbd>
+          <kbd class="kbd">b</kbd>
+          <kbd class="kbd">n</kbd>
+          <kbd class="kbd">m</kbd>
+          <kbd class="kbd">/</kbd>
+        </div>
+      </div>
+          <!-- life score -->
+           <div class="flex justify-between w-2/3">
+            <button class="btn rounded-full bg-[#894189] text-white">
+              Life
+              <img src="/public/heart.svg" alt="">
+              <span>1</span>
+            </button>
+            <button class="btn rounded-full bg-[#360490] text-white">
+              Score
+              <img src="/public/dollar.svg" alt="">
+              <span>1</span>
+            </button>
+           </div>
+      </section>
       <section class="score"></section>
     </main>
 
@@ -27,4 +87,3 @@
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
   </body>
 </html>
-
