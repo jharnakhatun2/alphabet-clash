@@ -30,3 +30,8 @@ const setBackgroundColor = (id)=>{
     const element = elementById(id);
     element.classList.add('bg-orange-400', 'text-black');
 }
+//set Background color on key
+const removeBackgroundColor = (id)=>{
+    const element = elementById(id);
+    element.classList.remove('bg-orange-400', 'text-black');
+}
