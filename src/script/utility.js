@@ -1,6 +1,19 @@
 // Select element
 const element = (selector) => document.querySelector(selector);
 const elementById = (id) => document.getElementById(id);
+
+//get Text element by Id
+const getTextElement = (id)  => {
+    const element = document.getElementById(id);
+    const elementText = element.innerText;
+    const textToNumber = parseInt(elementText);
+    return textToNumber
+}
+//set Text element by Id
+const setTextElement = (id, value) => {
+    const element = document.getElementById(id);
+    element.innerText = value;
+}
 // Hide element
 const hideElement = (selector) =>{
     const element = document.querySelector(selector);
