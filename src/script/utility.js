@@ -2,6 +2,12 @@
 const element = (selector) => document.querySelector(selector);
 const elementById = (id) => document.getElementById(id);
 
+const getText = (id) => {
+    const element = document.getElementById(id);
+    const text = element.innerText;
+    return text;
+}
+
 //get Text element by Id
 const getTextElement = (id)  => {
     const element = document.getElementById(id);

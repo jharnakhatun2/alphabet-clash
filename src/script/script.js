@@ -4,6 +4,10 @@ const playAgainBtn = elementById('play-again');
 function handleKeyboardButtonPress(event){
     //key button
     const keyboardButton = event.key;
+    console.log(keyboardButton);
+    if(keyboardButton === 'Escape'){
+        gameOver();
+    }
     //current key
     const currentAlphabet = elementById('current-alphabet');
     const currentAlphabetText = currentAlphabet.textContent ;
@@ -57,7 +61,6 @@ function play(){
     //reset life and score
     setTextElement('life-score', 5);
     setTextElement('current-score', 0);
-    //removeBackgroundColor(id)
     continueGame();
 }
 playBtn.addEventListener('click', play);
@@ -65,5 +68,12 @@ playBtn.addEventListener('click', play);
 function gameOver(){
     hideElement('.playground');
     showElement('.score'); 
+    //set total score
+    const currentScore = getTextElement('current-score');
+    setTextElement('final-score', currentScore);
+    //removeBackgroundColor(id)
+    const currentAlphabetKey = getText('current-alphabet');
+    removeBackgroundColor(currentAlphabetKey)
+
 }
 playAgainBtn.addEventListener('click', play);
